@@ -14,16 +14,17 @@ Thank you for visiting my programming projects. This is a repository by the ALX 
 ## About
 This repository contains introductory projects for Python programming at first. The topics covered include:
 - Basic Introduction to Python3
--
+- Use of if/else, loops and functions
 
 ## Requirements
 * Ubuntu 14.04+ LTS
 * Python 3.4+
 * pip3 1.5+
-* pycodestyle+
+* pycodestyle 2.8+
 
 ## Projects
 1. [0x00-python-hello_world](./0x00-python-hello_world)
+2. [0x01-python-if_else_loops_functions](0x01-python-if_else_loops_functions)
 
 ## Credits
 Work is owned and maintained by Warren Mulubi ([@Mulubi]).
