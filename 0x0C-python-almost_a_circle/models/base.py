@@ -7,7 +7,8 @@ class Base:
     This represents the base for all the other classes in this project
     
     Private Class Attributes:
-    __nb_objects (Int): number of instantiated Bases"""
+    __nb_objects (Int): number of instantiated Bases
+    """
 
     __nb_objects = 0
 
@@ -21,8 +22,8 @@ class Base:
         self.name = name
         self.id = id
     
-    if id is not None:
-        self.id = id
-    else:
-        Base.__nb_objects += 1
-        self.id = Base.__nb_objects
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
