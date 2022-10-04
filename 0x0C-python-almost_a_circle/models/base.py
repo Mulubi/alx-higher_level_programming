@@ -19,9 +19,6 @@ class Base:
             id (int): The id of every new base
         """
 
-        self.name = name
-        self.id = id
-    
         if id is not None:
             self.id = id
         else:
