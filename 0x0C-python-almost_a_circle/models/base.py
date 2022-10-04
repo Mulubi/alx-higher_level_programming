@@ -7,7 +7,7 @@ class Base:
     This represents the base for all the other classes in this project
     
     Private Class Attributes:
-    __nb_objects (Int): number of instantiated Bases
+    _nb_objects (int): number of instantiated Bases
     """
 
     __nb_objects = 0
