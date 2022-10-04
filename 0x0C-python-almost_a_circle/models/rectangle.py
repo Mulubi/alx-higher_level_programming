@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class that contains the base module"""
+"""Defines a rectangle class"""
 from models.base import Base
 
 
