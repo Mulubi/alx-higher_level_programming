@@ -43,7 +43,7 @@ def display_values():
         print(row)
 
     ''' close the connection '''
-    cursor.close()
+    conn.close()
 
 
 '''
