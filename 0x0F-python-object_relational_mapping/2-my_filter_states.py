@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 '''
 A script that takes in an argument and dsiplays all values in the
 states table of a database where name matches the argument.
