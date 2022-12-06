@@ -3,25 +3,29 @@
 import MySQLdb
 import sys
 
-# Get the MySQL username, password and database from the user input
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
 
-# A way to connect to the database given
-conn = MySQLdb.connect(host='localhost', port=3306, user=username,
-                       password=password, db=database)
+def show_all():
+    # Get MySQL username, password and database from the user input
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-# A cursor object
-cursor = conn.cursor()
+    # A way to connect to the database given
+    conn = MySQLdb.connect(host='localhost', port=3306, user=username,
+                           password=password, db=database)
 
-# execute a SELECT statement that gets all states from the database
-cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
+    # A cursor object
+    cursor = conn.cursor()
 
-# Print the results found
-print('ID\tName')
-for row in cursor:
-    print(f'{row[0]}\t{row[1]}')
+    # execute a SELECT statement that gets all states from database
+    cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
 
-# Close the connection
-conn.close()
+    # Print the results found
+    for row in cursor:
+        print(row)
+
+    # Close the connection
+    conn.close()
+
+    if __name__ == '__main__':
+        show_all()
