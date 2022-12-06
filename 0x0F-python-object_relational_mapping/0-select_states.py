@@ -27,5 +27,6 @@ def show_all():
     # Close the connection
     conn.close()
 
-    if __name__ == '__main__':
-        show_all()
+
+if __name__ == '__main__':
+    show_all()
