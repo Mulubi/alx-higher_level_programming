@@ -48,6 +48,9 @@ def display_values():
     for row in cursor:
         print(row)
 
+    ''' close the connection '''
+    cursor.close()
+
 
 '''
 Check if the script is being executed directly
