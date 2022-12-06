@@ -25,7 +25,8 @@ cursor = conn.cursor()
 
 # execute a SELECT statement to get all states from the database
 # that have names starting with the letter N
-cursor.execute('SELECT * FROM states WHERE name LIKE "N%"')
+cursor.execute('SELECT * FROM states WHERE name LIKE "N%"' +
+               'ORDER BY states.id ASC')
 
 
 # print the results
