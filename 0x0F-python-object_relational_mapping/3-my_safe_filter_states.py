@@ -29,20 +29,11 @@ def display_values():
     cursor = conn.cursor()
 
     '''
-    Define the queries using placeholders for the
-    values
+    Define the queries using placeholders and
+    execute the Query
     '''
-    query = "SELECT * FROM states WHERE name =\
-            %s ORDER BY id ASC; "
-
-    '''
-    Supply values to be input in the placeholders
-    in the query
-    '''
-    values = (state_name,)
-
-    ''' Execute the Query '''
-    cursor.execute(query, values)
+    cursor.execute("SELECT * FROM states WHERE name =\
+                   %s ORDER BY id ASC; ".format(state_name))
 
     ''' Print the results '''
     for row in cursor:
