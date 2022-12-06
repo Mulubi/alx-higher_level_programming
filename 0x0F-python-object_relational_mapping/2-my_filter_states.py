@@ -27,8 +27,9 @@ def display_tables():
     cursor = conn.cursor()
 
     ''' Execute the SQL query required '''
-    cursor.execute("SELECT * FROM states WHERE state_name='{}'
-                   ORDER BY Id ASC".format(state_name))
+    cursor.execute("SELECT * FROM states WHERE name =\
+                   \'{}\'ORDER BY id ASC; "
+                   .format(state_name))
 
     ''' Fetch the results found'''
     results = cursor.fetchall()
