@@ -33,7 +33,8 @@ def display_values():
     execute the Query
     '''
     cursor.execute("SELECT * FROM states WHERE name =\
-                   %s ORDER BY id ASC; ".format(state_name))
+                   \'{}\' ORDER BY id ASC; "
+                   .format(state_name))
 
     ''' Get the results '''
     results = cursor.fetchall()
