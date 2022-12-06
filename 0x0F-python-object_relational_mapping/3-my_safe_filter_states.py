@@ -35,8 +35,11 @@ def display_values():
     cursor.execute("SELECT * FROM states WHERE name =\
                    %s ORDER BY id ASC; ".format(state_name))
 
+    ''' Get the results '''
+    results = cursor.fetchall()
+
     ''' Print the results '''
-    for row in cursor:
+    for row in results:
         print(row)
 
     ''' close the connection '''
