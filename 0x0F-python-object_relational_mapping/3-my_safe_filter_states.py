@@ -32,9 +32,9 @@ def display_values():
     Define the queries using placeholders and
     execute the Query
     '''
-    cursor.execute("SELECT * FROM states WHERE name =\
-                   \'{}\' ORDER BY id ASC; "
-                   .format(state_name))
+    cursor.execute("SELECT * FROM states WHERE name = \
+                   %s ORDER BY id ASC; ",
+                   [state_name])
 
     ''' Get the results '''
     results = cursor.fetchall()
