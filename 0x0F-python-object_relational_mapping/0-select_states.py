@@ -9,11 +9,8 @@ password = sys.argv[2]
 database = sys.argv[3]
 
 # A way to connect to the database given
-conn = MySQLdb.connect(host='localhost',
-          port=3306,
-          user=username,
-          password=password,
-          db=database)
+conn = MySQLdb.connect(host='localhost', port=3306, user=username,
+                       password=password, db=database)
 
 # A cursor object
 cursor = conn.cursor()
