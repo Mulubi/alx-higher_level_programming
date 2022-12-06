@@ -10,10 +10,10 @@ database = sys.argv[3]
 
 # A way to connect to the database given
 conn = MySQLdb.connect(host='localhost',
-                port=3306,
-                user=username,
-                password=password,
-                db=database)
+          port=3306,
+          user=username,
+          password=password,
+          db=database)
 
 # A cursor object
 cursor = conn.cursor()
@@ -24,7 +24,7 @@ cursor.execute('SELECT * FROM states ORDER BY states.id ASC')
 # Print the results found
 print('ID\tName')
 for row in cursor:
-    print(f'{row[0]}\ {row[1]}')
+    print(f'{row[0]}\t{row[1]}')
 
 # Close the connection
 conn.close()
