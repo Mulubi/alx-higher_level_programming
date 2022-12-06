@@ -39,13 +39,13 @@ def display_values():
     ''' Get the results '''
     results = cursor.fetchall()
 
-    ''' close the connection '''
-    conn.close()
-
     ''' Print the results '''
     for row in results:
         print(row)
 
+    ''' close the connection '''
+    cursor.close()
+    conn.close()
 
 '''
 Check if the script is being executed directly
