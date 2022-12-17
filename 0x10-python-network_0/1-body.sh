@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Take in the URL as an argument
+# Take in the URL as an arg
 url=$1
 
 # Use curl to send a GET request to the URL
