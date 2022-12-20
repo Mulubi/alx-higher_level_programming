@@ -1,16 +1,15 @@
 #!/bin/bash
-
 # Take in the URL as an arg
 url=$1
 
-# Use curl to send a GET request to the URL
-# Store the status code in a variable
-status=$(curl -sL -o /dev/null -w "%{http_code}" "$url")
+# Send the GET request and store the response
+response=$(curl -s -w "%{http_code}\n%{body}" "$url")
 
-# Check the status code
-if [ $status -eq 200 ]; then
-	# If the status code is 200, display the body of the
-	# response
-	response=$(curl -sL "$url")
-	echo "$response"
+# Extract the status code and the body of the response
+status_code=$(echo "$response" | awk 'NR==1 {print $0}')
+body=$(echo "$response" | awk 'NR>1 {print $0}')
+
+# if the status code is 200, display the body response
+if [ "$status_code" -eq 200 ]; then
+	echo "$body"
 fi
